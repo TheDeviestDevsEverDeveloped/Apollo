@@ -1,3 +1,88 @@
 {
-"coming": "very soon"
+
+"name": "apollo",
+
+"version": "1.0.0",
+
+"engines": {
+
+"node": "8.9.3"
+
+},
+
+"description": "A general discord bot made in discord.js",
+
+"main": "yuga.js",
+
+"dependencies": {
+
+"bufferutil": "^3.0.2",
+
+"discord.js": "11.2.1",
+
+"dotenv": "4.0.0",
+
+"eslint": "^4.6.1",
+
+"erlpack": "discordapp/erlpack",
+
+"google-translate-api": "2.3.0",
+
+"libsodium-wrappers": "^0.5.2",
+
+"moment": "2.19.4",
+
+"pg":"latest",
+
+"moment-duration-format": "2.0.1",
+
+"opusscript": "0.0.6",
+
+"superagent": "3.8.2",
+
+"urban.js": "2.4.3",
+
+"uws": "^8.14.1",
+
+"ytdl-core": "0.18.5",
+
+"zlib-sync": "0.1.4",
+
+"ffmpeg-binaries": "3.2.2-3",
+
+"simple-youtube-api": "5.0.0"
+
+},
+
+"devDependencies": {},
+
+"scripts": {
+
+"test": "node apollo.js",
+
+"start": "node apollo.js"
+
+},
+
+"repository": {
+
+"type": "git",
+
+"url": "git+https://github.com/TheDeviestDevsEverDeveloped/apollo.git"
+
+},
+
+"author": "Striker and Mr.Table; TheDeviestDevsEverDeveloped",
+
+"license": "MIT",
+
+"bugs": {
+
+"url": "https://github.com/TheDeviestDevsEverDeveloped/apollo/issues"
+
+},
+
+"homepage": "https://github.com/TheDeviestDevsEverDeveloped/apollo#readme"
+
 }
+

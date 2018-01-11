@@ -14,7 +14,7 @@ exports.run = (client, message, args, testdatabase, usedPrefix) => {
         console.log('After checking: ' + points);
 points.weapon = mentionedAmount
 
-    testdatabase.query('UPDATE users SET points = $1 WHERE userId = $2', [JSON.stringify(points), message.author.id], (err, res) => {
+    testdatabase.query('UPDATE testusers SET points = $1 WHERE userId = $2', [JSON.stringify(points), message.author.id], (err, res) => {
         if (err) {console.log(err); return}
     });
 });

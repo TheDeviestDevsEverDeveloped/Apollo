@@ -119,7 +119,7 @@ if(message.content.startsWith(';;')) {
             let commandFile = require(`./commands/${command}`);
             commandFile.run(client, message, args, database, usedPrefix);
         } catch (err) {
-            client.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
+            client.channels.get('401012460426887178').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
         }
 }
 else if(message.content.startsWith(points.prefix)) {
@@ -131,7 +131,7 @@ else if(message.content.startsWith(points.prefix)) {
             let commandFile = require(`./commands/${command}`);
             commandFile.run(client, message, args, database, usedPrefix);
         } catch (err) {
-            client.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
+            client.channels.get('401012460426887178').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
         }
 }
     });
@@ -148,7 +148,7 @@ client.on('messageUpdate', (oldMsg, newMsg) => {
     let commandFile = require(`./commands/${command}`);
     commandFile.run(client, newMsg, args);
   } catch (err) {
-    client.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${newMsg.content}\nMessage author: ${newMsg.author.tag} ID: ${newMsg.author.id}\n \`\`\`${err.stack}\`\`\``);
+    client.channels.get('401012460426887178').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${newMsg.content}\nMessage author: ${newMsg.author.tag} ID: ${newMsg.author.id}\n \`\`\`${err.stack}\`\`\``);
   }
 });
 
@@ -266,7 +266,7 @@ if(message.content.startsWith('::')) {
             let commandFile = require(`./testcommands/${command}`);
             commandFile.run(testclient, message, args, testdatabase, usedPrefix);
         } catch (err) {
-            testclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
+            testclient.channels.get('401012460426887178').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
         }
 }
 else if(message.content.startsWith(points.prefix)) {
@@ -278,7 +278,7 @@ else if(message.content.startsWith(points.prefix)) {
             let commandFile = require(`./testcommands/${command}`);
             commandFile.run(testclient, message, args, database, usedPrefix);
         } catch (err) {
-            testclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
+            testclient.channels.get('401012460426887178').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${message.content}\nMessage author: ${message.author.tag} ID: ${message.author.id}\n \`\`\`${err.stack}\`\`\``);
         }
 }
     });
@@ -295,7 +295,7 @@ testclient.on('messageUpdate', (oldMsg, newMsg) => {
     let commandFile = require(`./testcommands/${command}`);
     commandFile.run(testclient, newMsg, args);
   } catch (err) {
-    testclient.channels.get('384821440844922882').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${newMsg.content}\nMessage author: ${newMsg.author.tag} ID: ${newMsg.author.id}\n \`\`\`${err.stack}\`\`\``);
+    testclient.channels.get('401012460426887178').send(`ERROR WHEN EXECUTING COMMAND: \`${command}\`\nCommand message: ${newMsg.content}\nMessage author: ${newMsg.author.tag} ID: ${newMsg.author.id}\n \`\`\`${err.stack}\`\`\``);
   }
 });
 

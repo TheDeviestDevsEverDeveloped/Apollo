@@ -12,15 +12,37 @@ exports.run = (client, message, args, testdatabase) => {
         let points = res.rows[0];
         if(!points){message.channel.send('This user currently has no database stats')}
         else points = JSON.parse(res.rows[0].points);
+        if(points.weapon = 1){
+        var weaponEquipped = "Wooden Sword"
+        } else if(points.weapon = 2){
+        var weaponEquipped = "Copper Sword"
+        } else if(points.weapon = 3){
+        var weaponEquipped = "Wooden Sword"
+        } else if(points.weapon = 4){
+        var weaponEquipped = "Wooden Sword"
+        } else if(points.weapon = 5){
+        var weaponEquipped = "Wooden Sword"
+        } else if(points.weapon = 6){
+        var weaponEquipped = "Wooden Sword"
+        } else if(points.weapon = 7){
+        var weaponEquipped = "Crystal Sword"
+        } else if(points.weapon = 500){
+        var weaponEquipped = "The Code"
+        } else {
+        var weaponEquipped = "Nothing. Nothing at all."
+        }
                 let coinsNeeded = (((points.level + 1) * 10)**2)
         const profileEmbed = new Discord.RichEmbed()
 .setTitle(`${mentionedUsername}'s profile`)
+.addField(`HP: `, `${points.playerHealth}`)
 .addField(`VIP Level: `, `${points.vipLevel}`)
 .addField(`Current Level: `, `${points.level}`)
 .addField(`Current Points: `, `${points.points}`)
 .addField(`Awards: `, `${points.awards}`)
 .addField(`XP: `, `${points.xp}`)
 .addField(`Coins: `, `${points.coins}`)
+.addField(`Enemy: `, `${points.enemyName}`)
+.addField(`Weapon: `, `${weaponEquipped}`)
 .addField(`XP needed to level up: `, `${coinsNeeded} XP`)
 .setTimestamp()
 .setFooter(`${message.author.tag}`, message.author.displayAvatarURL)

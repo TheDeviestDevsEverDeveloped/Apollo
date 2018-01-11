@@ -231,7 +231,11 @@ testclient.on('message', message => {
       rewardLevel: 1,
       xpBoostLevel: 1,
       coinBoostLevel: 1,
-      vipLevel: 1
+      vipLevel: 1,
+      weapon: 1,
+      enemyHealth: 100,
+      enemyName: "Zombie",
+      playerHealth: 100
   };
 
 		testdatabase.query('INSERT INTO testusers (points, userId) VALUES ($1, $2)', [JSON.stringify(points), message.author.id]);

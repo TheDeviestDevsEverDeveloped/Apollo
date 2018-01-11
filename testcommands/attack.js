@@ -29,7 +29,7 @@ exports.run = (client, message, args, testdatabase, usedPrefix) => {
             if(points.zombieCooldown < noww){
             points.enemyHealth = points.enemyHealth - playerDamageDealt
             if(points.enemyHealth > 0){
-            message.channel.send(`*${message.author.username} attacked a ${points.enemyName}*\n***${message.author.username} dealt ${playerDamageDealt} damage***\n**${points.enemyName} dealt ${enemyDamageDealt} damage**\n***${message.author.username} has ${points.playerHealth} HP left***\n**${points.enemyName} has ${points.enemyHealth} HP left`)
+            message.channel.send(`*${message.author.username} attacked a ${points.enemyName}*\n***${message.author.username} dealt ${playerDamageDealt} damage***\n**${points.enemyName} dealt ${enemyDamageDealt} damage**\n***${message.author.username} has ${points.playerHealth} HP left***\n**${points.enemyName} has ${points.enemyHealth} HP left**`)
             points.enemyHealth = points.enemyHealth - playerDamageDealt
             points.playerHealth = points.playerHealth - enemyDamageDealt
             }

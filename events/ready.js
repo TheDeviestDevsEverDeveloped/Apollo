@@ -1,7 +1,7 @@
 exports.run = (client) => {
   client.user.setPresence({
     game: {
-      name: `help | In ${client.guilds.size} servers!`,
+      name: `;;help | In ${client.guilds.size} servers!`,
       type: 0
     }
   })

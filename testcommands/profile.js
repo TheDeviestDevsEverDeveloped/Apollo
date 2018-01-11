@@ -17,13 +17,13 @@ exports.run = (client, message, args, testdatabase) => {
         } else if(points.weapon = 2){
         var weaponEquipped = "Copper Sword"
         } else if(points.weapon = 3){
-        var weaponEquipped = "Wooden Sword"
+        var weaponEquipped = "Iron Sword"
         } else if(points.weapon = 4){
-        var weaponEquipped = "Wooden Sword"
+        var weaponEquipped = "Steel Sword"
         } else if(points.weapon = 5){
-        var weaponEquipped = "Wooden Sword"
+        var weaponEquipped = "Diamond Sword"
         } else if(points.weapon = 6){
-        var weaponEquipped = "Wooden Sword"
+        var weaponEquipped = "Platinum Sword"
         } else if(points.weapon = 7){
         var weaponEquipped = "Crystal Sword"
         } else if(points.weapon = 500){

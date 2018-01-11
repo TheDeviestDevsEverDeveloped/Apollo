@@ -1,4 +1,4 @@
-exports.run = (client, message, args, database, usedPrefix) => {
+exports.run = (client, message, args, testdatabase, usedPrefix) => {
     
         const mentionedID = message.author.id
 

@@ -32,12 +32,12 @@ embed: errorembed
 
 }
 
-fs.readdir("./rolebotevents/", (err, files) => {
+fs.readdir("./events/", (err, files) => {
   if (err) return console.error(err);
   files.forEach(file => {
-    let eventFunction = require(`./rolebotevents/${file}`);
+    let eventFunction = require(`./events/${file}`);
     let eventName = file.split(".")[0];
-    rolebotclient.on(eventName, (...args) => eventFunction.run(rolebotclient, ...args));
+    client.on(eventName, (...args) => eventFunction.run(client, ...args));
   });
 });
 

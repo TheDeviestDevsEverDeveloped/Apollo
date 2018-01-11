@@ -7,7 +7,7 @@ exports.run = (client, message, args, testdatabase) => {
         var mentionedID = message.author.id
         var mentionedUsername = message.author.username
     }
-    database.query('SELECT points FROM testusers WHERE userId = $1', [mentionedID], (err, res) => {
+    testdatabase.query('SELECT points FROM testusers WHERE userId = $1', [mentionedID], (err, res) => {
         if (err) {console.log(err); return}
         let points = res.rows[0];
         if(!points){message.channel.send('This user currently has no database stats')}

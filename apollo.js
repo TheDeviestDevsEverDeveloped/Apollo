@@ -299,6 +299,6 @@ testclient.on('messageUpdate', (oldMsg, newMsg) => {
   }
 });
 
-testclient.login(process.env.TESTOKEN);
+testclient.login(process.env.TESTTOKEN);
 
 module.exports.error = error;

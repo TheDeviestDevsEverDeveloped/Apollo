@@ -42,8 +42,6 @@ client.login(process.env.TOKEN);
 
 module.exports.error = error;
 
-const Discord = require('discord.js');
-
 const testclient = new Discord.Client({
 
 disableEveryone: true

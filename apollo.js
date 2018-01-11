@@ -73,7 +73,7 @@ client.on('message', message => {
       points: 0,
       level: 1,
       awards: "None",
-      prefix: "r!",
+      prefix: ";;",
       xp: 0,
       coins: 0,
       dailyCooldown: new Date().getTime(),

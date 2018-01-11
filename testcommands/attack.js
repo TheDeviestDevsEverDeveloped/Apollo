@@ -28,14 +28,16 @@ exports.run = (client, message, args, testdatabase, usedPrefix) => {
             if(countDownDate < noww){
             if(points.zombieCooldown < noww){
             points.enemyHealth = points.enemyHealth - playerDamageDealt
+            points.playerHealth = points.playerHealth - enemyDamageDealt
+            if(points.playerHealth < 1){
+            message.channel.send(`*${message.author.username} attacked a ${points.enemyName}...*\n*And died...*`)
+            points.enemyHealth = 100
+            }
             if(points.enemyHealth > 0){
             message.channel.send(`*${message.author.username} attacked a ${points.enemyName}*\n***${message.author.username} dealt ${playerDamageDealt} damage***\n**${points.enemyName} dealt ${enemyDamageDealt} damage**\n***${message.author.username} has ${points.playerHealth} HP left***\n**${points.enemyName} has ${points.enemyHealth} HP left**`)
-            points.enemyHealth = points.enemyHealth - playerDamageDealt
-            points.playerHealth = points.playerHealth - enemyDamageDealt
             }
             points.zombieCooldown = new Date().getTime() + 5000
             if(points.enemyHealth < 1){
-            points.playerHealth = points.playerHealth - enemyDamageDealt
             points.xp = points.xp - (0 - rewardXP)
             points.coins = points.coins - (0 - rewardCoins)
             points.enemyHealth = 100

@@ -26,7 +26,7 @@ const errorembed = new Discord.RichEmbed()
 .setTimestamp()
 .setDescription(`\`\`\`xl\n${err.stack}\`\`\``);
 
-client.channels.get('385485532458778626').send({
+client.channels.get('401012460426887178').send({
 embed: errorembed
 });
 
@@ -173,7 +173,7 @@ const testerrorembed = new Discord.RichEmbed()
 .setTimestamp()
 .setDescription(`\`\`\`xl\n${err.stack}\`\`\``);
 
-testclient.channels.get('385485532458778626').send({
+testclient.channels.get('401012460426887178').send({
 embed: testerrorembed
 });
 

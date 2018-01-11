@@ -3,7 +3,7 @@ exports.run = (client, message, args, testdatabase, usedPrefix) => {
         message.channel.send(`You don't have proper permissions to run this command!`)
         return
     }
-    const mentionedAmount = message.content.replace(`${usedPrefix}setprefix `, '')
+    const mentionedAmount = message.content.replace(`${usedPrefix}setweapon `, '')
     if(!args) {message.channel.send('You can\'t run this without any args')}
 
     testdatabase.query('SELECT points FROM testusers WHERE userId = $1', [message.author.id], (err, res) => {

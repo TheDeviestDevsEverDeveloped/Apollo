@@ -6,7 +6,7 @@ res.rows.forEach(row => array.push(row.points));
 array = array.sort((a, b) => {return b - a});
 var stats, levelll;
 stats = array[0];
-levelll = stats.points;
+levelll = stats.level;
 message.channel.send(levelll)
 });  
 }

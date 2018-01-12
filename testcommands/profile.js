@@ -14,19 +14,26 @@ exports.run = (client, message, args, testdatabase) => {
         else points = JSON.parse(res.rows[0].points);
         if(points.weapon = 1){
         var weaponEquipped = "Wooden Sword"
-        } else if(points.weapon = 2){
+        }
+        if(points.weapon = 2){
         var weaponEquipped = "Copper Sword"
-        } else if(points.weapon = 3){
+        }
+        if(points.weapon = 3){
         var weaponEquipped = "Iron Sword"
-        } else if(points.weapon = 4){
+        }
+        if(points.weapon = 4){
         var weaponEquipped = "Steel Sword"
-        } else if(points.weapon = 5){
+        }
+        if(points.weapon = 5){
         var weaponEquipped = "Diamond Sword"
-        } else if(points.weapon = 6){
+        }
+        if(points.weapon = 6){
         var weaponEquipped = "Platinum Sword"
-        } else if(points.weapon = 7){
+        }
+        if(points.weapon = 7){
         var weaponEquipped = "Crystal Sword"
-        } else if(points.weapon = 500){
+        }
+        if(points.weapon = 500){
         var weaponEquipped = "The Code"
         } else {
         var weaponEquipped = "Nothing. Nothing at all."
@@ -42,7 +49,7 @@ exports.run = (client, message, args, testdatabase) => {
 .addField(`XP: `, `${points.xp}`)
 .addField(`Coins: `, `${points.coins}`)
 .addField(`Enemy: `, `${points.enemyName}`)
-.addField(`Weapon: `, `${weaponEquipped}`)
+.addField(`Weapon: `, `${weaponEquipped} ${points.weapon}`)
 .addField(`XP needed to level up: `, `${coinsNeeded} XP`)
 .setTimestamp()
 .setFooter(`${message.author.tag}`, message.author.displayAvatarURL)

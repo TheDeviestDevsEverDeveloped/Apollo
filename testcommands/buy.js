@@ -48,7 +48,7 @@ if (amountWanted % 1 !== 0){
             message.channel.send(`*${message.author.username}, you don't have enough coins*`)
             return;
             }
-            if ((args[0] === '6') && (points.coins < amountWanted) && (points.playerHealth + amountWanted < 100)){
+            if ((args[0] === '6') && (points.coins < amountWanted) || (points.playerHealth + amountWanted < 100)){
             message.channel.send(`*${message.author.username}, you don't have enough coins or you're too high of an HP amount already*`)
             return;
             }

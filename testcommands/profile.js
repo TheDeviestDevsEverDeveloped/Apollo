@@ -49,7 +49,7 @@ exports.run = (client, message, args, testdatabase) => {
 .addField(`XP: `, `${points.xp}`)
 .addField(`Coins: `, `${points.coins}`)
 .addField(`Enemy: `, `${points.enemyName}`)
-.addField(`Weapon: `, `${weaponEquipped} ${points.weapon}`)
+.addField(`Weapon: `, `${weaponEquipped} (Level ${points.weapon})`)
 .addField(`XP needed to level up: `, `${coinsNeeded} XP`)
 .setTimestamp()
 .setFooter(`${message.author.tag}`, message.author.displayAvatarURL)

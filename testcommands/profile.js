@@ -12,31 +12,31 @@ exports.run = (client, message, args, testdatabase) => {
         let points = res.rows[0];
         if(!points){message.channel.send('This user currently has no database stats')}
         else points = JSON.parse(res.rows[0].points);
+        
+        var weaponEquipped = "Nothing. Nothing at all."
         if(points.weapon = 1){
-        var weaponEquipped = "Wooden Sword"
+        weaponEquipped = "Wooden Sword"
         }
         if(points.weapon = 2){
-        var weaponEquipped = "Copper Sword"
+        weaponEquipped = "Copper Sword"
         }
         if(points.weapon = 3){
-        var weaponEquipped = "Iron Sword"
+        weaponEquipped = "Iron Sword"
         }
         if(points.weapon = 4){
-        var weaponEquipped = "Steel Sword"
+        weaponEquipped = "Steel Sword"
         }
         if(points.weapon = 5){
-        var weaponEquipped = "Diamond Sword"
+        weaponEquipped = "Diamond Sword"
         }
         if(points.weapon = 6){
-        var weaponEquipped = "Platinum Sword"
+        weaponEquipped = "Platinum Sword"
         }
         if(points.weapon = 7){
-        var weaponEquipped = "Crystal Sword"
+        weaponEquipped = "Crystal Sword"
         }
         if(points.weapon = 500){
-        var weaponEquipped = "The Code"
-        } else {
-        var weaponEquipped = "Nothing. Nothing at all."
+        weaponEquipped = "The Code"
         }
                 let coinsNeeded = (((points.level + 1) * 10)**2)
         const profileEmbed = new Discord.RichEmbed()

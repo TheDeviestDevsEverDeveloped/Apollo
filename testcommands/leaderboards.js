@@ -1,6 +1,8 @@
 exports.run = (client, message, args, testdatabase) => {
-testdatabase.query(`SELECT * FROM testusers`).then(rows => {
-  rows.sort(function(a, b){return b - a});
-                message.channel.send(rows[0] + "\n" + rows[1] + "\n" + rows.userId + "\n" + rows);
-        })   
+testdatabase.query('SELECT points FROM testusers, (err, res) => {
+        if (err) {console.log(err); return}
+        let points = res.rows
+points.sort(function(a, b){return b - a});
+message.channel.send(points[0])
+});  
 }

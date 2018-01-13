@@ -4,6 +4,7 @@ testdatabase.query(`SELECT points FROM testusers`, (err, res) => {
 let array = [];
 res.rows.forEach(row => array.push(row.points));
 array = array.sort((a, b) => {return b - a});
+        console.log(array [0].level)
 var stats, levelll;
 stats = array[0];
 levelll = stats.level;

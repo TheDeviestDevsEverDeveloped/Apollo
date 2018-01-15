@@ -28,11 +28,11 @@ if (amountWanted % 1 !== 0){
             let points = res.rows[0];
             if(!points){message.channel.send('This user currently has no database stats')}
             else points = JSON.parse(res.rows[0].points);
-            if ((args[0] === '1') && (points.coins < (((points.xpBoostLevel * 100) - 1) * amountWanted))){
+            if ((args[0] === '1') && (points.coins < (((points.level * points.xpBoostLevel * 100) - 1) * amountWanted))){
             message.channel.send(`*${message.author.username}, you don't have enough coins*`)
             return;
             }
-            if ((args[0] === '2') && (points.coins < (((points.coinBoostLevel * 100) - 1) * amountWanted))){
+            if ((args[0] === '2') && (points.coins < (((points.level * points.coinBoostLevel * 500) - 1) * amountWanted))){
             message.channel.send(`*${message.author.username}, you don't have enough coins*`)
             return;
             }
@@ -48,11 +48,11 @@ if (amountWanted % 1 !== 0){
             message.channel.send(`*${message.author.username}, you don't have enough coins*`)
             return;
             }
-            if ((args[0] === '6') && (points.coins < amountWanted) || (points.playerHealth + amountWanted < 100)){
+            if ((args[0] === '+-+') && (points.coins < amountWanted) || (points.playerHealth + amountWanted < 100)){
             message.channel.send(`*${message.author.username}, you don't have enough coins or you're too high of an HP amount already*`)
             return;
             }
-            if ((args[0] === '6') && (points.coins > amountWanted) && (points.playerHealth + amountWanted < 101)){
+            if ((args[0] === '+-+') && (points.coins > amountWanted) && (points.playerHealth + amountWanted < 101)){
             points.coins = points.coins - (amountWanted)
             points.playerHealth = points.playerHealth - (0 - amountWanted)
             message.channel.send(`*${message.author.username} bought ${amountWanted} HP! Current HP: ${points.playerHealth}*`)  
@@ -72,12 +72,12 @@ if (amountWanted % 1 !== 0){
             points.xp = 0 - (0 - (points.xp)) - (0 - (100 * amountWanted))
             message.channel.send(`*${message.author.username} bought ${100 * amountWanted} XP!*`)  
             }
-            if ((args[0] === '1') && (points.coins > ((points.xpBoostLevel * 100) - 1))){
+            if ((args[0] === '1') && (points.coins > ((points.level * points.xpBoostLevel * 100) - 1))){
             points.coins = points.coins - ((points.xpBoostLevel * 100) * amountWanted)
             points.xpBoostLevel = 0 - (0 - (points.xpBoostLevel)) - (0 - amountWanted)
             message.channel.send(`*${message.author.username} upgraded their xp boost level to level ${points.xpBoostLevel}*`)  
             }
-            if ((args[0] === '2') && (points.coins > ((points.coinBoostLevel * 100) - 1))){
+            if ((args[0] === '2') && (points.coins > ((points.level * points.coinBoostLevel * 500) - 1))){
             points.coins = points.coins - ((points.coinBoostLevel * 100) * amountWanted)
             points.coinBoostLevel =  0 - (0 - (points.coinBoostLevel)) - (0 - amountWanted) 
             message.channel.send(`*${message.author.username} upgraded their coin boost level to level ${points.coinBoostLevel}*`)  

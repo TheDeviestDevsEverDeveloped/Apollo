@@ -31,14 +31,18 @@ exports.run = (client, message, args, testdatabase) => {
       coinflipCooldown: new Date().getTime(),
       guessnumberCooldown: new Date().getTime(),
       rewardsAvailable: 0,
-      rewardLevel: 1,
-      xpBoostLevel: 1,
-      coinBoostLevel: 1,
       vipLevel: 1,
       weapon: 1,
       enemyHealth: 100,
       enemyName: "Zombie",
-      playerHealth: 100
+      playerHealth: 100,
+      levelPoints: 10,
+      pointsIntoRewards: 1,
+      pointsIntoXP: 1,
+      pointsIntoCoins: 1,
+      pointsIntoDamage: 1,
+      pointsIntoShield: 1,
+      pointsIntoHealth: 1
   };
 
     testdatabase.query('UPDATE testusers SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {

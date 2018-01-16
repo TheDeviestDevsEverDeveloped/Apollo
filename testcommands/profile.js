@@ -14,28 +14,28 @@ exports.run = (client, message, args, testdatabase) => {
         else points = JSON.parse(res.rows[0].points);
         
         var weaponEquipped = "Nothing. Nothing at all."
-        if(points.weapon === 1){
+        if((points.weapon === 1) || (points.weapon = 1)){
         weaponEquipped = "Wooden Sword"
         } else {
-        if(points.weapon === 2){
+        if((points.weapon === 2) || (points.weapon = 2)){
         weaponEquipped = "Copper Sword"
         } else {
-        if(points.weapon === 3){
+        if((points.weapon === 3) || (points.weapon = 3)){
         weaponEquipped = "Iron Sword"
         } else {
-        if(points.weapon === 4){
+        if((points.weapon === 4) || (points.weapon = 4)){
         weaponEquipped = "Steel Sword"
         } else {
-        if(points.weapon === 5){
+        if((points.weapon === 5) || (points.weapon = 5)){
         weaponEquipped = "Diamond Sword"
         } else {
-        if(points.weapon === 6){
+        if((points.weapon === 6) || (points.weapon = 6)){
         weaponEquipped = "Platinum Sword"
         } else {
-        if(points.weapon === 7){
+        if((points.weapon === 7) || (points.weapon = 7)){
         weaponEquipped = "Crystal Sword"
         } else {
-        if(points.weapon === 500){
+        if((points.weapon === 500) || (points.weapon = 500)){
         weaponEquipped = "The Code"
         } else {
         weaponEquipped = "Nothing. Nothing at all."

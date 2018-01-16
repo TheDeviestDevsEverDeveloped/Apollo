@@ -16,28 +16,30 @@ exports.run = (client, message, args, testdatabase) => {
         var weaponEquipped = "Nothing. Nothing at all."
         if(points.weapon = 1){
         weaponEquipped = "Wooden Sword"
-        }
+        } else {
         if(points.weapon = 2){
         weaponEquipped = "Copper Sword"
-        }
+        } else {
         if(points.weapon = 3){
         weaponEquipped = "Iron Sword"
-        }
+        } else {
         if(points.weapon = 4){
         weaponEquipped = "Steel Sword"
-        }
+        } else {
         if(points.weapon = 5){
         weaponEquipped = "Diamond Sword"
-        }
+        } else {
         if(points.weapon = 6){
         weaponEquipped = "Platinum Sword"
-        }
+        } else {
         if(points.weapon = 7){
         weaponEquipped = "Crystal Sword"
-        }
+        } else {
         if(points.weapon = 500){
         weaponEquipped = "The Code"
-        }
+        } else {
+        weaponEquipped = "Nothing. Nothing at all."
+        }}}}}}}}
                 let coinsNeeded = (((points.level + 1) * 10)**2)
         const profileEmbed = new Discord.RichEmbed()
 .setTitle(`${mentionedUsername}'s profile`)
@@ -51,6 +53,7 @@ exports.run = (client, message, args, testdatabase) => {
 .addField(`Enemy: `, `${points.enemyName}`)
 .addField(`Weapon: `, `${weaponEquipped} (Level ${points.weapon})`)
 .addField(`XP needed to level up: `, `${coinsNeeded} XP`)
+.addField(`XP left until level up: `, `${coinsNeeded - points.xp} XP`)
 .setTimestamp()
 .setFooter(`${message.author.tag}`, message.author.displayAvatarURL)
         let usrPoints = points.points

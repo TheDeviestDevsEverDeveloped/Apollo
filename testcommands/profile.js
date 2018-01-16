@@ -15,30 +15,30 @@ exports.run = (client, message, args, testdatabase) => {
         
         var weaponEquipped = "Nothing. Nothing at all."
         if((points.weapon === 1) || (points.weapon = 1)){
-        weaponEquipped = "Wooden Sword"
+        var weaponEquipped = "Wooden Sword"
         } else {
         if((points.weapon === 2) || (points.weapon = 2)){
-        weaponEquipped = "Copper Sword"
+        var weaponEquipped = "Copper Sword"
         } else {
         if((points.weapon === 3) || (points.weapon = 3)){
-        weaponEquipped = "Iron Sword"
+        var weaponEquipped = "Iron Sword"
         } else {
         if((points.weapon === 4) || (points.weapon = 4)){
-        weaponEquipped = "Steel Sword"
+        var weaponEquipped = "Steel Sword"
         } else {
         if((points.weapon === 5) || (points.weapon = 5)){
-        weaponEquipped = "Diamond Sword"
+        var weaponEquipped = "Diamond Sword"
         } else {
         if((points.weapon === 6) || (points.weapon = 6)){
-        weaponEquipped = "Platinum Sword"
+        var weaponEquipped = "Platinum Sword"
         } else {
         if((points.weapon === 7) || (points.weapon = 7)){
-        weaponEquipped = "Crystal Sword"
+        var weaponEquipped = "Crystal Sword"
         } else {
         if((points.weapon === 500) || (points.weapon = 500)){
-        weaponEquipped = "The Code"
+        var weaponEquipped = "The Code"
         } else {
-        weaponEquipped = "Nothing. Nothing at all."
+        var weaponEquipped = "Nothing. Nothing at all."
         }}}}}}}}
                 let coinsNeeded = (((points.level + 1) * 10)**2)
         const profileEmbed = new Discord.RichEmbed()

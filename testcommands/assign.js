@@ -30,22 +30,22 @@ if (amountWanted % 1 !== 0){
             }
             if ((args[0].toLowerCase() === 'damage') && (points.levelPoints > amountWanted)){
                 points.levelPoints = points.levelPoints - amountWanted
-                points.pointsIntoDamage = pointsIntoDamage - (0 - amountWanted)
+                points.pointsIntoDamage = points.pointsIntoDamage - (0 - amountWanted)
                 message.channel.send(`*${message.author.username} assigned ${amountWanted} points to their damage attribute!*`)  
                 }
             if ((args[0].toLowerCase() === 'xp') && (points.levelPoints > amountWanted)){
                 points.levelPoints = points.levelPoints - amountWanted
-                points.pointsIntoDamage = pointsIntoDamage - (0 - amountWanted)
+                points.pointsIntoXP = pointsIntoXP - (0 - amountWanted)
                 message.channel.send(`*${message.author.username} assigned ${amountWanted} points to their xp attribute!*`)  
                 }
             if ((args[0].toLowerCase() === 'coins') && (points.levelPoints > amountWanted)){
                 points.levelPoints = points.levelPoints - amountWanted
-                points.pointsIntoDamage = pointsIntoDamage - (0 - amountWanted)
+                points.pointsIntoCoins = pointsIntoCoins - (0 - amountWanted)
                 message.channel.send(`*${message.author.username} assigned ${amountWanted} points to their coin attribute!*`)  
                 }
             if ((args[0].toLowerCase() === 'shield') && (points.levelPoints > amountWanted)){
                 points.levelPoints = points.levelPoints - amountWanted
-                points.pointsIntoDamage = pointsIntoDamage - (0 - amountWanted)
+                points.pointsIntoShield = pointsIntoShield - (0 - amountWanted)
                 message.channel.send(`*${message.author.username} assigned ${amountWanted} points to their shield attribute!*`)  
                 }
         testdatabase.query('UPDATE testusers SET points = $1 WHERE userId = $2', [JSON.stringify(points), mentionedID], (err, res) => {

@@ -11,10 +11,6 @@ exports.run = (client, message, args, testdatabase, usedPrefix) => {
         return;
     }
         const mentionedID = message.author.id
-if (itemWanted % 1 !== 0){
-    return;
-    message.channel.send('I need a number')
-                         }
 if (amountWanted % 1 !== 0){
     message.channel.send('I need a number')
     return;

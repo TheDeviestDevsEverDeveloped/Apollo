@@ -1,4 +1,6 @@
 const Discord = require('discord.js');
+const tableclient = new Discord.Client();
+const torbletclient = new Discord.Client();
 const client = new Discord.Client({
 disableEveryone: true
 });
@@ -15,6 +17,47 @@ const testdatabase = new pg.Client({
 	ssl: true
 });
 testdatabase.connect();
+
+tableclient.on('message', message => {
+  if (message.author.bot) return;
+if(message.content === "!!!analbeadspam"){
+var i;
+	for (i=0; i < 500; i++){
+	message.channel.send("Anal beads " + i)
+	}
+}
+	if(message.content.startsWith("!duel")){
+		setTimeout(function(){ 
+      message.channel.send("!accept");
+}, 1000);
+	}
+	  if (message.author.id !== '233366720062947330') return;
+		if(message.content.startsWith("!use")){
+		setTimeout(function(){ 
+      message.channel.send("!use 1");
+}, 1000);
+	}
+});
+
+
+tableclient.login(process.env.TABLETOKEN);
+
+torbletclient.on('message', message => {
+  if (message.author.bot) return;
+	if (message.author.id !== '271355666977783808') return;
+	if(message.content.startsWith("!accept")){
+		setTimeout(function(){ 
+      message.channel.send("!use 1");
+}, 1000);
+	}		if(message.content.startsWith("!use 1")){
+		setTimeout(function(){ 
+      message.channel.send("!duel <@271355666977783808>");
+}, 1000);
+	}
+});
+
+
+torbletclient.login(process.env.TORBLETTOKEN);
 
 //Custom error catcher function
 

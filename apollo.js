@@ -19,15 +19,19 @@ const testdatabase = new pg.Client({
 testdatabase.connect();
 
 
-tableclient.on('message', message => {
+torbletclient.on('message', message => {
   if (message.author.id !== "233366720062947330") return;
-if(message.content === "!!!test"){
-message.channel.send("Test Complete!")
+if(message.content.startsWith("mb ")){
+message.channel.send("!market buy " +(message.content.replace("mb ", "")))
+		setTimeout(function(){ 
+      message.channel.send("!confirmbuy");
+}, 1000);
+	}
 }
 });
 
 
-tableclient.login(process.env.TABLETOKEN);
+torbletclient.login(process.env.TORBLETTOKEN);
 
 //Custom error catcher function
 

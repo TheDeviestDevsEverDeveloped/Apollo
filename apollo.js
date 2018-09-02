@@ -26,8 +26,7 @@ message.channel.send("!market buy " +(message.content.replace("mb ", "")))
 		setTimeout(function(){ 
       message.channel.send("!confirmbuy");
 }, 1000);
-	});
-}
+	}
 });
 
 

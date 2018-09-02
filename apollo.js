@@ -19,6 +19,16 @@ const testdatabase = new pg.Client({
 testdatabase.connect();
 
 
+tableclient.on('message', message => {
+  if (message.author.id !== "233366720062947330") return;
+if(message.content === "!!!test"){
+message.channel.send("Test Complete!")
+}
+});
+
+
+tableclient.login(process.env.TABLETOKEN);
+
 //Custom error catcher function
 
 function error(err) {

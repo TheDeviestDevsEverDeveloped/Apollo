@@ -27,6 +27,9 @@ message.channel.send("!market buy " +(message.content.replace("mb ", "")))
       message.channel.send("!confirmbuy");
 }, 1000);
 	}
+	if(message.content === "msopa"){
+message.channel.send("!market search --order price a")
+	}
 });
 
 

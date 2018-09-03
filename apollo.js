@@ -27,8 +27,8 @@ message.channel.send("!market buy " +(message.content.replace("mb ", "")))
       message.channel.send("!confirmbuy");
 }, 1000);
 	}
-	if(message.content === "msopa"){
-message.channel.send("!market search --order price a")
+	if(message.content.startsWith("msopa")){
+message.channel.send("!market search --name " + message.content.replace("msopa ", "") + " --showiv --order price a")
 	}
 });
 

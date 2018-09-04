@@ -30,6 +30,9 @@ message.channel.send("!market buy " +(message.content.replace("mb ", "")))
 	if(message.content.startsWith("msopa")){
 message.channel.send("!market search --name " + message.content.replace("msopa ", "") + " --showiv --order price a")
 	}
+	if(message.content.startsWith("m!bing")){
+message.channel.send("Bong!")
+	}
 });
 
 

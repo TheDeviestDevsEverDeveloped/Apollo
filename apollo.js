@@ -31,7 +31,16 @@ message.channel.send("!market buy " +(message.content.replace("mb ", "")))
 message.channel.send("!market search --name " + message.content.replace("msopa ", "") + " --showiv --order price a")
 	}
 	if(message.content.startsWith("m!bing")){
-message.channel.send("Bong!")
+    message.channel.sendEmbed({
+        color: (Math.floor(Math.random() * (16777215 - 1 + 1))) + 1,
+        description: "Bong!"
+    })
+	}
+	if(message.content.startsWith("m!embed")){
+    message.channel.sendEmbed({
+        color: (Math.floor(Math.random() * (16777215 - 1 + 1))) + 1,
+        description: (message.content.replace("m!embed ", ""))
+    })
 	}
 });
 

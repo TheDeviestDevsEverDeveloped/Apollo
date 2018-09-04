@@ -37,6 +37,7 @@ message.channel.send("!market search --name " + message.content.replace("msopa "
     })
 	}
 	if(message.content.startsWith("m!embed")){
+		message.delete();
     message.channel.sendEmbed({
         color: (Math.floor(Math.random() * (16777215 - 1 + 1))) + 1,
         description: (message.content.replace("m!embed ", ""))

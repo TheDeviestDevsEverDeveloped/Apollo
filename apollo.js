@@ -27,8 +27,11 @@ message.channel.send("!market buy " +(message.content.replace("mb ", "")))
       message.channel.send("!confirmbuy");
 }, 1000);
 	}
+	if(message.content.startsWith("mfind ")){
+message.channel.send("!market search --name " + message.content.replace("mfind ", "") + " --showiv --order price a")
+	}
 	if(message.content.startsWith("msopa")){
-message.channel.send("!market search --name " + message.content.replace("msopa ", "") + " --showiv --order price a")
+message.channel.send("!market search --name --showiv --order price a")
 	}
 	if(message.content.startsWith("m!bing")){
     message.channel.sendEmbed({

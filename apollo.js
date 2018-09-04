@@ -30,8 +30,8 @@ message.channel.send("!market buy " +(message.content.replace("mb ", "")))
 	if(message.content.startsWith("mfind ")){
 message.channel.send("!market search --name " + message.content.replace("mfind ", "") + " --showiv --order price a")
 	}
-	if(message.content.startsWith("msopa")){
-message.channel.send("!market search --name --showiv --order price a")
+	if(message.content === "msopa"){
+message.channel.send("!market search --showiv --order price a")
 	}
 	if(message.content.startsWith("m!bing")){
     message.channel.sendEmbed({

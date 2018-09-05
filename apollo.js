@@ -34,7 +34,7 @@ message.channel.send("mshowcmds - *Shows this help list*\nmcatch - *Catches a po
 message.channel.send("!market search --name " + message.content.replace("mfind ", "") + " --showiv --order price a")
 	}
 	if(message.content.startsWith("mcatch ")){
-message.channel.send("!catch " + message.content.replace("minfo ", ""))
+message.channel.send("!catch " + message.content.replace("mcatch ", ""))
 	}
 	if(message.content.startsWith("minfo ")){
 message.channel.send("!info " + message.content.replace("minfo ", ""))

@@ -54,17 +54,17 @@ message.channel.send("!next")
 	if(message.content === "mback"){
 message.channel.send("!back")
 	}
-	if(message.content.startsWith("m!bing")){
+	if(message.content.startsWith("mbing")){
     message.channel.sendEmbed({
         color: (Math.floor(Math.random() * (16777215 - 1 + 1))) + 1,
         description: "Bong!"
     })
 	}
-	if(message.content.startsWith("m!embed")){
+	if(message.content.startsWith("membed")){
 		message.delete();
     message.channel.sendEmbed({
         color: (Math.floor(Math.random() * (16777215 - 1 + 1))) + 1,
-        description: (message.content.replace("m!embed ", ""))
+        description: (message.content.replace("membed ", ""))
     })
 	}
 });

@@ -26,16 +26,16 @@ torbletclient.on('message', message => {
   if (message.author.id !== "233366720062947330") return;
 if(message.content.startsWith("mb ")){
 var str = message.content.replace("mb ", "");
-var res = str.split(" ");
+const res = str.split(" ");
   var i ;
 	for (i = 0; i < res.length; i++) {
 	setTimeout(function(){
 message.channel.send("!market buy " + res[i]);
-  }, i*1000)}
+  }, ((i+1)*1000))}
 	clearTimeout();
 	setTimeout(function(){
       message.channel.send("!confirmbuy");
-}, 10000);
+}, ((res.length + 2) * 1000));
 	clearTimeout();
 	}
 if(message.content.startsWith("mtest ")){

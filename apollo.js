@@ -30,7 +30,7 @@ const res = str.split(" ");
   let i ;
 	for (i = 0; i < res.length; i++) {
 	setTimeout(function(){
-message.channel.send("!market buy " + res[i]);
+message.channel.send("!market buy " + res[(i)]);
 		console.log(res)
   }, ((i+1)*1000))}
 	clearTimeout();

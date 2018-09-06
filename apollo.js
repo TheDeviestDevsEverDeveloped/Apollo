@@ -31,11 +31,11 @@ const res = str.split(" ");
 	setTimeout(function(){
 message.channel.send("!market buy " + res[(i)]);
 		console.log(res)
-  }, ((i+1)*1500))}
+  }, ((i+1)*2000))}
 	clearTimeout();
 	setTimeout(function(){
       message.channel.send("!confirmbuy");
-}, ((res.length + 2) * 1500));
+}, ((res.length + 2) * 2000));
 	clearTimeout();
 	}
 if(message.content.startsWith("mtest ")){

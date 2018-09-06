@@ -22,10 +22,59 @@ testdatabase.connect();
 torbletclient.on('message', message => {
   if (message.author.id !== "233366720062947330") return;
 if(message.content.startsWith("mb ")){
-message.channel.send("!market buy " +(message.content.replace("mb ", "")))
+var str = message.content.replace("mb ", "");
+var res = str.split(" ");
+if(res[1]){
+message.channel.send("!market buy " + res[1])
 		setTimeout(function(){ 
       message.channel.send("!confirmbuy");
-}, 1000);
+}, 1000)};
+if(res[2]){
+message.channel.send("!market buy " + res[2])
+		setTimeout(function(){ 
+      message.channel.send("!confirmbuy");
+}, 1000)}
+if(res[3]){
+message.channel.send("!market buy " + res[3])
+		setTimeout(function(){ 
+      message.channel.send("!confirmbuy");
+}, 1000)}
+if(res[4]){
+message.channel.send("!market buy " + res[4])
+		setTimeout(function(){ 
+      message.channel.send("!confirmbuy");
+}, 1000)}
+if(res[5]){
+message.channel.send("!market buy " + res[5])
+		setTimeout(function(){ 
+      message.channel.send("!confirmbuy");
+}, 1000)}
+if(res[6]){
+message.channel.send("!market buy " + res[6])
+		setTimeout(function(){ 
+      message.channel.send("!confirmbuy");
+}, 1000)}
+if(res[7]){
+message.channel.send("!market buy " + res[7])
+		setTimeout(function(){ 
+      message.channel.send("!confirmbuy");
+}, 1000)}
+if(res[8]){
+message.channel.send("!market buy " + res[8])
+		setTimeout(function(){ 
+      message.channel.send("!confirmbuy");
+}, 1000)}
+if(res[9]){
+message.channel.send("!market buy " + res[9])
+		setTimeout(function(){ 
+      message.channel.send("!confirmbuy");
+}, 1000)}
+if(res[10]){
+message.channel.send("!market buy " + res[10])
+		setTimeout(function(){ 
+      message.channel.send("!confirmbuy");
+}, 1000)}
+
 	}
 	if(message.content === "mshowcmds"){
 message.channel.send("mshowcmds - *Shows this help list*\nmcatch - *Catches a pokemon*\nmbing - *Checks if I'm online*\nmfind - *Searches pokecord market for pokemon*\nminfo - *Displays info on pokemon of mine*\nmpokes - *Used to search specific pokemon*\nmsopa - *Displays the cheapest pokemon on the pokecord market*\nmnext - *Sends '!next'*\nmback - *Sends '!back'*\nmpoke - *Shows my pokemon*\nmembed - *Embeds a message*")

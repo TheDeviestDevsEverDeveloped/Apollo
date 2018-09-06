@@ -34,6 +34,14 @@ message.channel.send("!market buy " + res[i])
       message.channel.send("!confirmbuy");
 }, 1000);
 	}
+if(message.content.startsWith("mtest ")){
+	setTimeout(function(){ 
+message.channel.send("Message 1")
+	}, 1000)
+	setTimeout(function(){ 
+      message.channel.send("Message 2");
+}, 1000);
+	}
 	if(message.content === "mshowcmds"){
 message.channel.send("mshowcmds - *Shows this help list*\nmcatch - *Catches a pokemon*\nmbing - *Checks if I'm online*\nmfind - *Searches pokecord market for pokemon*\nminfo - *Displays info on pokemon of mine*\nmpokes - *Used to search specific pokemon*\nmsopa - *Displays the cheapest pokemon on the pokecord market*\nmnext - *Sends '!next'*\nmback - *Sends '!back'*\nmpoke - *Shows my pokemon*\nmembed - *Embeds a message*")
 	}

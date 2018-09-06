@@ -27,9 +27,9 @@ torbletclient.on('message', message => {
 if(message.content.startsWith("mb ")){
 var str = message.content.replace("mb ", "");
 var res = str.split(" ");
-	setTimeout(function(){ 
 	var i;
 	for (i = 0; i < res.length; i++) {
+	setTimeout(function(){ 
 message.channel.send("!market buy " + res[i])
 	}}, i*1000)
 	clearTimeout();

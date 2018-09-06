@@ -25,53 +25,73 @@ if(message.content.startsWith("mb ")){
 var str = message.content.replace("mb ", "");
 var res = str.split(" ");
 if(res[1]){
+			setTimeout(function(){ 
 message.channel.send("!market buy " + res[1])
+	}, 1000)
 		setTimeout(function(){ 
       message.channel.send("!confirmbuy");
 }, 1000)};
 if(res[2]){
+			setTimeout(function(){ 
 message.channel.send("!market buy " + res[2])
+	}, 1000)
 		setTimeout(function(){ 
       message.channel.send("!confirmbuy");
 }, 1000)}
 if(res[3]){
+			setTimeout(function(){ 
 message.channel.send("!market buy " + res[3])
-		setTimeout(function(){ 
+	}, 1000)
+	setTimeout(function(){ 
       message.channel.send("!confirmbuy");
 }, 1000)}
 if(res[4]){
+			setTimeout(function(){ 
 message.channel.send("!market buy " + res[4])
-		setTimeout(function(){ 
+	}, 1000)
+	setTimeout(function(){ 
       message.channel.send("!confirmbuy");
 }, 1000)}
 if(res[5]){
+			setTimeout(function(){ 
 message.channel.send("!market buy " + res[5])
-		setTimeout(function(){ 
+	}, 1000)
+	setTimeout(function(){ 
       message.channel.send("!confirmbuy");
 }, 1000)}
 if(res[6]){
+			setTimeout(function(){ 
 message.channel.send("!market buy " + res[6])
-		setTimeout(function(){ 
+	}, 1000)
+	setTimeout(function(){ 
       message.channel.send("!confirmbuy");
 }, 1000)}
 if(res[7]){
+			setTimeout(function(){ 
 message.channel.send("!market buy " + res[7])
-		setTimeout(function(){ 
+	}, 1000)
+	setTimeout(function(){ 
       message.channel.send("!confirmbuy");
 }, 1000)}
 if(res[8]){
+			setTimeout(function(){ 
 message.channel.send("!market buy " + res[8])
-		setTimeout(function(){ 
+	}, 1000)
+	setTimeout(function(){ 
       message.channel.send("!confirmbuy");
 }, 1000)}
 if(res[9]){
+			setTimeout(function(){ 
 message.channel.send("!market buy " + res[9])
-		setTimeout(function(){ 
+	}, 1000)
+	setTimeout(function(){ 
       message.channel.send("!confirmbuy");
 }, 1000)}
 if(res[10]){
+			setTimeout(function(){ 
 message.channel.send("!market buy " + res[10])
-		setTimeout(function(){ 
+	}, 1000)
+	setTimeout(function(){ 
       message.channel.send("!confirmbuy");
 }, 1000)}
 

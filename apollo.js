@@ -30,7 +30,8 @@ var res = str.split(" ");
 message.channel.send("!market buy " + res[i])
 	}
 	}, 1000)
-	setTimeout(function(){ 
+	setTimeout(function(){
+		clearTimeout()
       message.channel.send("!confirmbuy");
 }, 1000);
 	}

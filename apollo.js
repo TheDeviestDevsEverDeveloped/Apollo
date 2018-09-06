@@ -28,6 +28,7 @@ var res = str.split(" ");
 	var i;
 	for (i = 0; i < res.length; i++) {
 message.channel.send("!market buy " + res[i])
+	}
 	}, 1000)
 	setTimeout(function(){ 
       message.channel.send("!confirmbuy");

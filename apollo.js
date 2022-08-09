@@ -22,6 +22,112 @@ torbletclient.on("ready", () => {
   console.log("Cool with a K? More like Fool that is gay!");
 });
 
+    let answ = [
+"If we talking about outdoor pets, I got a fuck lot of bird",
+"FOX",
+"B)",
+"Chrisu wanna get  high together on my 18th bday",
+"foxes are rather cute",
+"still cute",
+"well",
+"I want a fox as a pet. We have a few in my yard from time to time. So they are my outdoor pets",
+"aw",
+"yes",
+"ew  is that your tribal name",
+"*weebs*",
+"NICO NICO NEEEEE",
+"more like",
+"neko",
+"*literally uses a neko emote*",
+"Weebs",
+"Thankss",
+"Gg",
+"gj",
+"Thank you",
+"Gg",
+"LOL, you just got to **level 26**. Do you feel accomplished? Do you feel proud?",
+"rip",
+".f",
+"I ate him",
+"I miss you umbra ",
+"kuru kuru",
+"necromancer aint mages",
+"That was bad lmfao",
+"ha ha ha..",
+"A Nekomancer",
+"eh",
+"What do you call a cat mage",
+"Lol ty",
+"Guys",
+"Suuuup bitches",
+"hbd in advance too",
+"If I forget tomorrow lol",
+"Damn Chrisu happy birthday in advance",
+"My birthday is tomorrow. We close to same date",
+"tyty",
+"Happy birthday. ",
+"Happy birthday sugar!",
+"thank you",
+"And thanks for boosting",
+"Hope you enjoy your day",
+"Ohh happy birthday!!",
+"thanks everyone for your bday messages, i gave the server a boost",
+"conversation kind of died",
+"it's from the tv series",
+"hype?",
+"oh",
+"hot?",
+"unlike link",
+"WHy does link look so",
+"Okay",
+"WEEB",
+"nerd",
+"that's the better version",
+"Or someone else ;-;",
+"Wanna play rock paper scissors ",
+"Ya",
+"bigger and frizzier",
+"na rock would be much bigger",
+"Something",
+"Rock",
+"Umm",
+"oh",
+"And the hairhihi",
+"i finally finished cooking dinner ",
+"Hmm thats pretty sus",
+"But the way she wants to cuddle hmm",
+"She didn't seeme like homo",
+"Idk",
+"Jk",
+"Jeez alright",
+"XD",
+"To approach ma baby",
+"I suppouse it has balls",
+"Enough",
+"Fair enought",
+"Imma chek it tomorrow if i catch it xD",
+"Haven't thought that",
+"Ouh",
+"You sure the other cat is a boy?",
+"My cat has a simp",
+"I agree",
+"In my case names aren't logical xD",
+"I get it",
+"Oh",
+"Just have a bad memory for stuff which isnt logical",
+"Oh not really",
+"When you read book and see a buterfly xD",
+"Its when things distract you and you forget other stuff",
+"Uhm",
+"Hmm?",
+"So you are moony?",
+"Ouh"
+]
+
+
+
+
+
 torbletclient.on('message', message => {
   if (message.author.id !== "233366720062947330") return;
 if(message.content.startsWith("mb ")){
@@ -40,12 +146,18 @@ message.channel.send("!market buy " + res[(i)]);
 	}
 if(message.content.startsWith("mtest ")){
 	setTimeout(function(){ 
-message.channel.send("Message 1")
-	}, 1000)
+
+	
+    message.channel.send(answ[Math.floor(Math.random() * answ.length)])
+  
+
+	
+	
+	}, 2000)
 	clearTimeout();
 	setTimeout(function(){ 
       message.channel.send("Message 2");
-}, 1000);
+}, 2000);
 	}
 if(message.content.startsWith("!duel ")){
 	setTimeout(function(){ 

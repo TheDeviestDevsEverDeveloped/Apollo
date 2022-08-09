@@ -18,6 +18,7 @@ const testdatabase = new pg.Client({
 });
 testdatabase.connect();
 
+
 torbletclient.on("ready", () => {
   console.log("Cool with a K? More like Fool that is gay!");
 });

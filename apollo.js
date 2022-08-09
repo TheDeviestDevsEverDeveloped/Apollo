@@ -156,7 +156,7 @@ if(message.content.startsWith("mtest ")){
 	}, 2000)
 	clearTimeout();
 	setTimeout(function(){ 
-      message.channel.send("Message 2");
+      message.channel.send("reeeep 2");
 }, 2000);
 	}
 if(message.content.startsWith("!duel ")){

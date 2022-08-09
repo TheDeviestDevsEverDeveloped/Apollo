@@ -212,4 +212,4 @@ message.channel.send("!back")
 });
 
 
-torbletclient.login(process.env.ALTTOKEN);
+torbletclient.login(process.env.TORBLETTOKEN);
